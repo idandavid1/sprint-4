@@ -12,16 +12,16 @@
     "author": "Me",
     "license": "ISC",
     "dependencies": {
-        "@react-oauth/google": "^0.8.0",
-        "bcrypt": "^5.0.0",
+        "@react-oauth/google": "^0.12.1",
+        "bcrypt": "^5.1.1",
         "cookie-parser": "^1.4.6",
         "cors": "^2.8.5",
-        "cryptr": "^6.0.3",
-        "express": "^4.17.1",
-        "mongodb": "^3.2.7",
-        "socket.io": "^4.2.0"
+        "cryptr": "^6.3.0",
+        "express": "^4.21.0",
+        "mongodb": "^6.9.0",
+        "socket.io": "^4.7.5"
     },
     "devDependencies": {
-        "nodemon": "^2.0.20"
+        "nodemon": "^3.1.5"
     }
 }
