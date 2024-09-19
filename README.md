@@ -69,8 +69,8 @@ Enter the frontend folder and repeat the same process.
 
 ```
 cd frontend
-npm i
 yarn install
+yarn start
 ```
 
 You shuold get a console ouput that the server is up and running at localhost:3000.
