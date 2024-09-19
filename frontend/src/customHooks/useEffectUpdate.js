@@ -1,13 +1,12 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef } from "react";
 export const useEffectUpdate = (callBack, dependencies) => {
+  const isFirstRender = useRef(true);
 
-    const isFirstRender = useRef(true)
-
-    useEffect(() => {
-        if (isFirstRender.current) {
-            isFirstRender.current = false
-            return
-        }
-        callBack()
-    }, dependencies)
-}
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+    callBack();
+  }, dependencies);
+};
