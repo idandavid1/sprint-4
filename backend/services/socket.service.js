@@ -10,7 +10,7 @@ function setupSocketAPI(http) {
   });
   gIo.on("connection", (socket) => {
     logger.info(`New connected socket [id: ${socket.id}]`);
-    socket.on("disconnect", (socket) => {
+    socket.on("disconnect", () => {
       logger.info(`Socket disconnected [id: ${socket.id}]`);
     });
     socket.on("chat-set-topic", (topic) => {
@@ -100,9 +100,13 @@ async function _getUserSocket(userId) {
   return socket;
 }
 async function _getAllSockets() {
-  // return all Socket instances
-  const sockets = await gIo.fetchSockets();
-  return sockets;
+  try {
+    const sockets = await gIo.fetchSockets();
+    return sockets;
+  } catch (err) {
+    logger.error("Failed to fetch all sockets", err);
+    return []; // Return an empty array in case of error
+  }
 }
 
 async function _printSockets() {
