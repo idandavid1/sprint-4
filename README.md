@@ -42,7 +42,7 @@ The technology stack we used was MERN - MongoDB, Express, React, Node.js.
 The app uses webSockets to update the board in real-time.
 The API calls to the backend are done with the REST API method.
 
-We have used many thirs side libraries for many goals like google-login, lodash, D&D and more.
+We have used many third party libraries for many goals like google-login, lodash, D&D and more.
 The layout and pixel-perfect were made with Sass (functions, mixins, variables). 
 
 ## Getting started
